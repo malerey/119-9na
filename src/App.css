@@ -6,8 +6,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   box-sizing: border-box;
 }
 
-button {
+.boton-rojo {
   background-color: red;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  align-self: center
+}
+
+.boton-azul {
+  background-color: blue;
   height: 30px;
   border: none;
   border-radius: 10px;
@@ -28,7 +37,7 @@ article {
 }
 
 footer {
-  background-color: blue;
+  background-color: pink;
   height: 100px;
 }
 

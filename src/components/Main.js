@@ -40,14 +40,19 @@ const cards = [
 
 ]
 
-const Main = () => {
+const Main = ({ isEminent }) => {
   return (
     <main>
       <h1>Soy Main</h1>
       <section>
       {
-        cards.map(card => <Card title={card.title}/>)
-      }
+        cards.map(card => (
+          <Card 
+            key={card.title} 
+            title={card.title} 
+            isEminent={isEminent}
+            />
+          ))}
       </section>
     </main>
   )

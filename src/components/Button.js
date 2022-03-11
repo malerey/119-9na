@@ -1,8 +1,18 @@
 
+// PROPS DRILLING vs CONTEXT o ESTADO GLOBAL  
 
-const Button = ({title}) => {
+//                   App.js 
+//    Nav            Main          Footer
+//                   Card         Button
+//                   Button 
+
+
+
+const Button = ({ title, isEminent }) => {
+
+  console.log(isEminent)
   return (
-    <button>
+    <button className={isEminent ? "boton-azul" : "boton-rojo"}>
       {title}
     </button>
   )
