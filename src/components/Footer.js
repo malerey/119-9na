@@ -1,11 +1,11 @@
 import Button from "./Button"
 
-const Footer = ({ isEminent }) => {
+const Footer = ({  }) => {
   return (
     <footer>
       <h2>Soy footer</h2>
       <input type="email" />
-      <Button title="Suscribirse al newsletter" isEminent={isEminent} />
+      <Button title="Suscribirse al newsletter" />
     </footer>
   )
 }

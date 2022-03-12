@@ -1,5 +1,5 @@
 import Card from './Card'
-
+import "./Main.css"
 const cards = [
   {
     title: "Card 1",
@@ -16,41 +16,19 @@ const cards = [
   {
     title: "Card 5",
   },
-  {
-    title: "Card 6",
-  },
-  {
-    title: "Card 7",
-  },
-  {
-    title: "Card 8",
-  },
-  {
-    title: "Card 9",
-  },
-  {
-    title: "Card 10",
-  },
-  {
-    title: "Card 11",
-  },
-  {
-    title: "Card 12",
-  },
 
 ]
 
-const Main = ({ isEminent }) => {
+const Main = ({  }) => {
   return (
     <main>
       <h1>Soy Main</h1>
-      <section>
+      <section className='contenedor-tarjetas'>
       {
         cards.map(card => (
           <Card 
             key={card.title} 
             title={card.title} 
-            isEminent={isEminent}
             />
           ))}
       </section>

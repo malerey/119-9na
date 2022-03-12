@@ -1,11 +1,12 @@
 
 import Button from './Button'
+import "./Card.css"
 
-const Card = ({isEminent}) => {
+const Card = ({}) => {
   return (
     <article>
       <h3>Soy una tarjeta</h3>
-      <Button title="comprar" isEminent={isEminent}/>
+      <Button title="comprar" />
     </article>
   )
 }

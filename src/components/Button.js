@@ -1,18 +1,22 @@
+import { useContext } from "react"
+import UserContext from "../context/UserContext"
 
-// PROPS DRILLING vs CONTEXT o ESTADO GLOBAL  
+const Button = ({ title }) => {
 
-//                   App.js 
-//    Nav            Main          Footer
-//                   Card         Button
-//                   Button 
+  // un hijo puede modificar el contexto
+  // si y solo si hay un estado definido en el componente padre 
 
+  const usuario = useContext(UserContext)
 
-
-const Button = ({ title, isEminent }) => {
-
-  console.log(isEminent)
+  const handleClick = () => {
+    usuario.setIsEminent(true)
+  }
+  
   return (
-    <button className={isEminent ? "boton-azul" : "boton-rojo"}>
+    <button 
+      className={usuario.isEminent ? "boton-azul" : "boton-rojo"}
+      onClick={handleClick}
+      >
       {title}
     </button>
   )
